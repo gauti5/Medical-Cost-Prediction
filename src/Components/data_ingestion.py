@@ -5,12 +5,13 @@ import numpy as np
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 from dataclasses import dataclass
+sys.path.append('/Users/siddanthapusandeep/Medical-Cost-Prediction')
 
-sys.path.append('src/logger.py')
-sys.path.append('src/exception.py')
 import logging
 from src.exception import CustomException
 from sklearn.model_selection import train_test_split
+
+from src.Components.data_transformation import Data_Transformation_Config, DataTransformation
 
 @dataclass
 class DataIngestionConfig:
@@ -51,8 +52,9 @@ class DataIngestion:
         
 if __name__=="__main__":
     obj=DataIngestion()
-    obj.initiate_data_ingestion()
-            
+    train_data, test_data=obj.initiate_data_ingestion()
+    data_transformtion=DataTransformation()
+    data_transformtion.initiate_data_transformation(train_data, test_data)      
             
             
             
