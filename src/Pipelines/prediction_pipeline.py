@@ -3,7 +3,7 @@ import sys
 import pandas as pd
 
 from pathlib import Path
-
+sys.path.append('/Users/siddanthapusandeep/Medical-Cost-Prediction')
 from src.logger import logging
 from src.exception import CustomException
 from src.utils import load_object
