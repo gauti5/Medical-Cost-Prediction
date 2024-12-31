@@ -55,9 +55,9 @@ if __name__=="__main__":
     obj=DataIngestion()
     train_data, test_data=obj.initiate_data_ingestion()
     data_transformtion=DataTransformation()
-    train_array, test_array=data_transformtion.initiate_data_transformation(train_data, test_data) 
+    train_arr, test_arr=data_transformtion.initiate_data_transformation(train_data, test_data) 
     model_trainer=ModelTrainer()
-    print(model_trainer.initate_model_trainer(train_array, test_array))  
+    print(model_trainer.initate_model_trainer(train_array=train_arr, test_array=test_arr))  
             
             
             

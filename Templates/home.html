@@ -1,0 +1,67 @@
+<html>
+  <head> 
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <title>Medical Cost Prediction</title>
+  </head>
+<body>
+<h1><center>Medical Cost Prediction</center></h1>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+        <label for="sex">Carat:</label>
+        <input type="text" id="sex" name="sex" placeholder="Enter Gender (String)">
+    </div>
+
+    <div class="form-group">
+        <label for="bmi">Depth:</label>
+        <input type="text" id="bmi" name="bmi" placeholder="Enter bmi value (float)">
+    </div>
+
+    <div class="form-group">  
+        <label for="children">Table:</label>
+        <input type="text" id="children" name="children" placeholder="Enter no.of children (int)">
+    </div>
+    
+    <div class="form-group">
+        <label for="smoker">x:</label>
+        <input type="text" id="smoker" name="smoker" placeholder="Enter whether he is smoker or not (str)">
+    </div>
+  
+    <div class="form-group">
+        <label for="region">y:</label>
+        <input type="text" id="region" name="region" placeholder="Enter region (str)">
+    </div>
+  
+
+<div class="form-group">
+  <label for="sex">Gender:</label>
+  <select id="sex" name="sex">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+</div>
+  
+<div class="form-group">
+  <label for="smoker">Smoker:</label>
+  <select id="smoker" name="smoker">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
+</div>
+
+
+<div class="form-group">
+  <label for="region">Region:</label>
+  <select id="region" name="region">
+    <option value="southwest">southwest</option>
+    <option value="southeast">southeast</option>
+    <option value="northwest">northwest</option>
+    <option value="northeast">northeast</option>
+
+  </select>
+</div>
+
+<div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

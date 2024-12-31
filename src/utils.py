@@ -24,7 +24,7 @@ def save_object(file_path, obj):
 def evaluate_model(X_train, y_train, X_test, y_test, models):
     try:
         report={}
-        for i in range(len(list(models.values()))):
+        for i in range(len(list(models))):
             model=list(models.values())[i]
             model.fit(X_train, y_train)
             
@@ -39,6 +39,18 @@ def evaluate_model(X_train, y_train, X_test, y_test, models):
             
         return report   
     except Exception as e:
-        logging.info("Exception occured while model training")
+        
         raise CustomException(e,sys)
+    
+    
+def load_object(filepath):
+    try:
+        
+        with open(filepath, 'rb') as file_obj:
+            return pickle.load(file_obj)
+    except Exception as e:
+        logging.info('Exception occured while loading object')
+        raise CustomException(e,sys)
+    
+    
         
