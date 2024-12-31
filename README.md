@@ -11,6 +11,8 @@ The Medical Cost Prediction consists of around 1300 records and six independent 
 5. smoking: Whether the individual is a smoker or not
 6. region: What region the individual belongs to - Northeast, Northwest, Southeast, Southwest
 
+## Input : 
+
 ![image](https://github.com/user-attachments/assets/92f7c163-2b41-4822-95ff-9232ec558cc6)
 
 ## Prediction : 
